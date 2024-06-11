@@ -26,6 +26,11 @@ Then, run the following command in your terminal to fetch the package:
 flutter pub get
 ```
 
+Preview
+-----
+
+![Animated Cards Carousel Preview](https://github.com/chamodanethra/animated_cards_carousel/blob/main/assets/preview.gif)
+
 Usage
 -----
 
