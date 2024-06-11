@@ -1,6 +1,6 @@
 name: animated_cards_carousel
-description: animated_cards_carousel is a Flutter package that provides a customizable carousel of animated cards. It allows for smooth scrolling and visually appealing animations as cards transition into and out of the viewport.
-version: 1.0.0
+description: A customizable carousel of animated cards for Flutter.
+version: 1.0.1
 homepage: https://github.com/chamodanethra/animated_cards_carousel
 repository: https://github.com/chamodanethra/animated_cards_carousel
 

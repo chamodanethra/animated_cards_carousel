@@ -2,9 +2,19 @@ import 'package:flutter/material.dart';
 import './utils.dart';
 
 const goldenRatio = 1.61803399;
-const defaultCardMargin = 16.0;
+const defaultPortraitCardMargin = 16.0;
+const defaultLandscapeCardMargin = 8.0;
 
+/// A customizable carousel of animated cards.
+///
+/// This widget allows for smooth scrolling and visually appealing animations
+/// as cards transition into and out of the viewport.
 class AnimatedCardsCarousel extends StatefulWidget {
+  /// Creates an [AnimatedCardsCarousel].
+  ///
+  /// The [cardsList] is required and represents the list of widgets to be
+  /// displayed as cards. The [cardAspectRatio] and [cardMargin] are optional
+  /// and provide customization for the appearance of the cards.
   const AnimatedCardsCarousel(
       {super.key,
       this.cardAspectRatio,
@@ -12,7 +22,11 @@ class AnimatedCardsCarousel extends StatefulWidget {
       required this.cardsList});
 
   final double? cardAspectRatio;
+
+  /// The margin around each card. Defaults to 16.0 if not provided.
   final double? cardMargin;
+
+  /// The list of widgets to be displayed as cards in the carousel.
   final List<Widget> cardsList;
 
   @override
@@ -39,6 +53,16 @@ class _AnimatedCardsCarouselState extends State<AnimatedCardsCarousel>
 
   @override
   Widget build(BuildContext context) {
+    // Get the screen size and orientation
+    var screenSize = MediaQuery.of(context).size;
+    var isPortrait = screenSize.height > screenSize.width;
+
+    // Use provided aspect ratio or fallback to a sensible default
+    double aspectRatio =
+        widget.cardAspectRatio ?? (isPortrait ? goldenRatio : 10);
+    double cardMargin = widget.cardMargin ??
+        (isPortrait ? defaultPortraitCardMargin : defaultLandscapeCardMargin);
+
     return Scaffold(
       body: LayoutBuilder(builder: (_, constraints) {
         return ListView.builder(
@@ -49,8 +73,8 @@ class _AnimatedCardsCarouselState extends State<AnimatedCardsCarousel>
               scrollOffset: scrollController.offset,
               viewportHeight: constraints.maxHeight,
               cardWidth: constraints.maxWidth,
-              cardAspectRatio: widget.cardAspectRatio ?? goldenRatio,
-              cardMargin: widget.cardMargin ?? defaultCardMargin,
+              cardAspectRatio: aspectRatio,
+              cardMargin: cardMargin,
               card: widget.cardsList[index],
             );
           },

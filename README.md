@@ -18,7 +18,7 @@ Add `animated_cards_carousel` to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  animated_cards_carousel: ^1.0.0
+  animated_cards_carousel: ^1.0.1
 ```
 Then, run the following command in your terminal to fetch the package:
 
@@ -57,8 +57,6 @@ class MyApp extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32),
           child: AnimatedCardsCarousel(
-            cardAspectRatio: 1.5,
-            cardMargin: 20.0,
             cardsList: List.generate(
               10,
                   (index) => Card(
@@ -81,8 +79,8 @@ class MyApp extends StatelessWidget {
 
 ### Properties
 
--   **`cardAspectRatio`**: (Optional) The aspect ratio of the cards. Defaults to the golden ratio (`1.61803399`).
--   **`cardMargin`**: (Optional) The margin around each card. Defaults to `16.0`.
+-   **`cardAspectRatio`**: (Optional) The aspect ratio of the cards. Defaults to the golden ratio (`1.61803399`) in portrait mode and (`10`) in landscape mode.
+-   **`cardMargin`**: (Optional) The margin around each card. Defaults to `16.0`in portrait mode and (`8.0`) in landscape mode.
 -   **`cardsList`**: The list of widgets to be displayed as cards.
 
 Customization

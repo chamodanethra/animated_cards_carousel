@@ -18,8 +18,6 @@ class MyApp extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32),
           child: AnimatedCardsCarousel(
-            cardAspectRatio: 1.5,
-            cardMargin: 20.0,
             cardsList: List.generate(
               10,
               (index) => Card(
