@@ -29,7 +29,7 @@ flutter pub get
 Preview
 -----
 
-![Animated Cards Carousel Preview](https://github.com/chamodanethra/animated_cards_carousel/blob/main/assets/preview.gif)
+![Animated Cards Carousel Preview](https://raw.githubusercontent.com/chamodanethra/animated_cards_carousel/main/assets/preview.gif)
 
 Usage
 -----
