@@ -63,10 +63,11 @@ class _AnimatedCardsCarouselState extends State<AnimatedCardsCarousel>
     double cardMargin = widget.cardMargin ??
         (isPortrait ? defaultPortraitCardMargin : defaultLandscapeCardMargin);
 
-    return Scaffold(
-      body: LayoutBuilder(builder: (_, constraints) {
+    return Expanded(
+      child: LayoutBuilder(builder: (_, constraints) {
         return ListView.builder(
           controller: scrollController,
+          physics: const ClampingScrollPhysics(), // Prevents the elastic overscroll effect
           itemBuilder: (_, index) {
             return _AnimatedCard(
               index: index,

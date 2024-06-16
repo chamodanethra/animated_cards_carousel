@@ -17,19 +17,23 @@ class MyApp extends StatelessWidget {
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32),
-          child: AnimatedCardsCarousel(
-            cardsList: List.generate(
-              10,
-              (index) => Card(
-                color: Colors.primaries[index % Colors.primaries.length],
-                child: Center(
-                  child: Text(
-                    'Card ${index + 1}',
-                    style: const TextStyle(fontSize: 24),
+          child: Column(
+            children: [
+              AnimatedCardsCarousel(
+                cardsList: List.generate(
+                  10,
+                  (index) => Card(
+                    color: Colors.primaries[index % Colors.primaries.length],
+                    child: Center(
+                      child: Text(
+                        'Card ${index + 1}',
+                        style: const TextStyle(fontSize: 24),
+                      ),
+                    ),
                   ),
                 ),
               ),
-            ),
+            ],
           ),
         ),
       ),

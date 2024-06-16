@@ -1,8 +1,14 @@
-## 1.0.0
+## 1.0.2
 
-*  initial release.
+* Documentation updates.
+* Bug fixes and improvements.
+* Example updated.
 
 ## 1.0.1
 
-*  Documentation updates.
+* Documentation updates.
 * Example updated.
+
+## 1.0.0
+
+*  initial release.

@@ -18,7 +18,7 @@ Add `animated_cards_carousel` to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  animated_cards_carousel: ^1.0.1
+  animated_cards_carousel: ^1.0.2
 ```
 Then, run the following command in your terminal to fetch the package:
 
@@ -35,6 +35,10 @@ Usage
 -----
 
 To use the `AnimatedCardsCarousel`, import the package and include it in your widget tree. Below is an example of how to set it up:
+
+### Important Note
+
+- **Do Not Wrap in `SingleChildScrollView`**: Wrapping the `AnimatedCardsCarousel` in a `SingleChildScrollView` can cause rendering issues. Instead, consider using a `SizedBox` or `Container` with a fixed height in between those.
 
 ```dart
 import 'package:flutter/material.dart';
@@ -101,6 +105,7 @@ cardMargin: 0.0, // No margin between cards
 cardsList: yourListOfCards,
 );
 ```
+
 
 Contributing
 ------------

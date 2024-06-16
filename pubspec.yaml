@@ -1,6 +1,7 @@
 name: animated_cards_carousel
-description: A customizable carousel of animated cards for Flutter.
-version: 1.0.1
+description: Create dynamic and customizable animated carousels for Flutter apps. Ideal for displaying portfolios, galleries, or widget collections with smooth transitions and visual appeal.
+
+version: 1.0.2
 homepage: https://github.com/chamodanethra/animated_cards_carousel
 repository: https://github.com/chamodanethra/animated_cards_carousel
 
